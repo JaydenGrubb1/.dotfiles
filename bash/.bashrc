@@ -1,5 +1,9 @@
 [[ $- != *i* ]] && return
 
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
+fi
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
@@ -18,3 +22,5 @@ fi
 
 export EDITOR='/usr/bin/nvim'
 export GIT_EDITOR='/usr/bin/nvim'
+
+source /usr/share/nvm/init-nvm.sh
