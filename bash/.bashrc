@@ -1,8 +1,11 @@
 [[ $- != *i* ]] && return
 
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
-fi
+#if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+#    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
+#fi
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
