@@ -7,7 +7,8 @@ return {
 
 		require("lualine").setup({
 			options = {
-				theme = "catppuccin",
+				theme = "auto",
+				-- disabled_filetypes = { "neo-tree" },
 			},
 			sections = default_config.sections,
 		})
