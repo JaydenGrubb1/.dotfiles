@@ -4,8 +4,14 @@
 #    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 #fi
 
+export HISTCONTROL=ignoreboth
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+
+export PATH="$HOME/.local/bin:$PATH"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
