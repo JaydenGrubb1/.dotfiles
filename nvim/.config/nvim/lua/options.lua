@@ -19,3 +19,10 @@ vim.opt.listchars = {
 	precedes = "«",
 	nbsp = "␣",
 }
+
+vim.keymap.set("n", "<A-j>", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<A-k>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<A-Down>", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<A-Up>", "<cmd>cprev<CR>")
+
+vim.diagnostic.config({ virtual_text = true })
