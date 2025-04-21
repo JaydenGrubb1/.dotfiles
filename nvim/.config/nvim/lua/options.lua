@@ -22,7 +22,13 @@ vim.opt.listchars = {
 
 vim.keymap.set("n", "<A-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<A-k>", "<cmd>cprev<CR>")
-vim.keymap.set("n", "<A-Down>", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<A-Up>", "<cmd>cprev<CR>")
+
+-- vim.keymap.set("n", "<A-Down>", "<cmd>cnext<CR>")
+-- vim.keymap.set("n", "<A-Up>", "<cmd>cprev<CR>")
+
+vim.keymap.set({ "n", "v" }, "<Up>", "")
+vim.keymap.set({ "n", "v" }, "<Down>", "")
+vim.keymap.set({ "n", "v" }, "<Left>", "")
+vim.keymap.set({ "n", "v" }, "<Right>", "")
 
 vim.diagnostic.config({ virtual_text = true })
