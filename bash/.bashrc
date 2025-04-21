@@ -31,3 +31,6 @@ export GIT_EDITOR='/usr/bin/nvim'
 
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
+if command -v fzf 2>&1 >/dev/null; then
+    eval "$(fzf --bash)"
+fi
