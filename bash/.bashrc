@@ -12,6 +12,7 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/android-sdk/platform-tools/:$PATH"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
